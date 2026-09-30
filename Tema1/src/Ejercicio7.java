@@ -4,8 +4,6 @@ public class Ejercicio7 {
     static void main (String[] args){
         Scanner teclado1 =new Scanner(System.in);
         String estado =teclado1.nextLine();
-
-
         Scanner teclado2 =new Scanner(System.in);
         int edad = teclado2.nextInt();
 
@@ -14,7 +12,7 @@ public class Ejercicio7 {
                 if (estado.equals("S")|| estado.equals("D")){
                     System.out.println("12%");
                 }
-                if (estado=="V"||estado=="C"){
+                if (estado.equals("v")||estado.equals("C")){
                     System.out.println("11.3%");
                 }
             }
