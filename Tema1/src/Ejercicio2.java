@@ -2,11 +2,9 @@ import java.util.Scanner;
 
 public class Ejercicio2 {
     static void main (String[] args){
-        Scanner teclado1 = new Scanner(System.in);
-        int numero1 = teclado1.nextInt();
-
-        Scanner teclado2 = new Scanner(System.in);
-        int numero2 = teclado2.nextInt();
+        Scanner teclado = new Scanner(System.in);
+        int numero1 = teclado.nextInt();
+        int numero2 = teclado.nextInt();
 
         if (numero1==numero2){
             System.out.println("son iguales");
