@@ -2,17 +2,11 @@ import java.util.Scanner;
 
 public class Ejercicio5 {
     static void main (String[] args){
-        Scanner teclado1 = new Scanner(System.in);
-        int numero1= teclado1.nextInt();
-
-        Scanner teclado2 = new Scanner(System.in);
-        int numero2= teclado2.nextInt();
-
-        Scanner teclado3 = new Scanner(System.in);
-        int numero3= teclado3.nextInt();
-
-        Scanner teclado4 = new Scanner(System.in);
-        int numero4= teclado4.nextInt();
+        Scanner teclado = new Scanner(System.in);
+        int numero1= teclado.nextInt();
+        int numero2= teclado.nextInt();
+        int numero3= teclado.nextInt();
+        int numero4= teclado.nextInt();
 
         int sumar = numero1+numero2+numero3+numero4;
 
@@ -23,13 +17,13 @@ public class Ejercicio5 {
         if (total<numero1){
             System.out.println("El numero "+numero1+" es superior que la media");
         }
-        if (total<numero2){
+        else if (total<numero2){
             System.out.println("El numero "+numero2+" es superior que la media");
         }
-        if (total<numero3){
+        else if (total<numero3){
             System.out.println("El numero "+numero3+" es superior que la media");
         }
-        if (total<numero4){
+        else if (total<numero4){
             System.out.println("El numero "+numero4+" es superior que la media");
         }
 //ejercicio con bucle
