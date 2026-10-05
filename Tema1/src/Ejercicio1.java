@@ -5,7 +5,7 @@ public class Ejercicio1 {
         Scanner teclado = new Scanner(System.in);
         int numero = teclado.nextInt();
 
-        System.out.println("El numero es ");
+        System.out.print("El numero es ");
 
         if (numero % 2 ==0){
             System.out.println("par");
