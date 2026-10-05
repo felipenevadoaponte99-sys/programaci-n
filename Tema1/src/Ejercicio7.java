@@ -2,10 +2,9 @@ import java.util.Scanner;
 
 public class Ejercicio7 {
     static void main (String[] args){
-        Scanner teclado1 =new Scanner(System.in);
-        String estado =teclado1.nextLine();
-        Scanner teclado2 =new Scanner(System.in);
-        int edad = teclado2.nextInt();
+        Scanner teclado =new Scanner(System.in);
+        String estado =teclado.nextLine();
+        int edad = teclado.nextInt();
 
         if (edad<50){
             if (edad<35){
