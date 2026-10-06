@@ -1,12 +1,13 @@
 package RELACION1º1;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Ejercicio6 {
     static void main (String[] args){
         Scanner teclado = new Scanner(System.in);
-        String letra =teclado.nextLine();
-
+//        char letra =teclado.next().toUpperCase(Locale.ROOT).charAt(0);
+        String letra =teclado.nextLine().toUpperCase(Locale.ROOT);
         switch(letra) {
             case "A":
                 System.out.println("Es la primera vocal (A)");
