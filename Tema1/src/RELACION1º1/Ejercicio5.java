@@ -11,6 +11,7 @@ public class Ejercicio5 {
         int numero4= teclado.nextInt();
 
         double total = (double)(numero1+numero2+numero3+numero4)/4;
+
         System.out.println("la media es "+total);
 
         if (total<numero1){
