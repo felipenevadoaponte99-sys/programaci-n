@@ -12,5 +12,15 @@ public class Ejemplo2 {
             res++;
         }
         System.out.println("numero : " + res);
+        System.out.println("-----------------------------------------" );
+
+        int nu2 =0;
+        for (int i = 1; i <= 10; i++) {
+            nu2=nu2+i;
+        }
+        System.out.println("la suma del 1 al 10 es: "+nu2);
+
+        System.out.println("-----------------------------------------" );
+
     }
 }
