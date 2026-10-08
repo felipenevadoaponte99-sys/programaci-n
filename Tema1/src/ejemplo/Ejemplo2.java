@@ -22,5 +22,25 @@ public class Ejemplo2 {
 
         System.out.println("-----------------------------------------");
 
+        /*constante*/
+        final String PASSWO ="contraseña";
+        /**/
+        String pru = "";
+        System.out.println("contraseña: ");
+        do {
+            pru = teclado.nextLine();
+
+        } while (!pru.equals(PASSWO));
+        System.out.println("puedes entrar");
+
+        /*
+        String pru = "";
+        System.out.println("contraseña: ");
+        do {
+             pru = teclado.nextLine();
+
+        } while (!pru.equals("hola"));
+        System.out.println("puedes entrar");
+        */
     }
 }
