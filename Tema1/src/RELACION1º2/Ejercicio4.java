@@ -4,26 +4,21 @@ import java.util.Scanner;
 
 public class Ejercicio4 {
     static void main(String[] args){
-        System.out.print("Introduce un número positivo: ");
-        Scanner teclado =new Scanner(System.in);
-        int numero = teclado.nextInt();
-        while (numero<0){
-            System.out.println("valor incorecto:");
-            numero = teclado.nextInt();
-        }
-        int total=0;
-        for (int i=1; i<=numero+1;i++){
-            int con=0;
-            for (int a=100; a>=1;a--){
-                if(i%a==0){
-                    con++;
-                }
-            }
-            if (con==2){
-                total=total+i;
-            }
-        }
-        System.out.println("la suma de los "+numero+" primeros numeros es: "+total);
+    Scanner teclado =new Scanner(System.in);
+    int cantidad = 0;
+    do{
+        System.out.println("introduce un numero");
+        cantidad = teclado.nextInt();
 
+        if(cantidad <=0){
+            System.out.println("debe ser mayor que positivo o mañor de 0");
+        }
+    }while (cantidad<=0);
+
+    int suma = 0;
+    for (int n1 =1; n1 <=cantidad; n1++){
+        suma +=n1;
+    }
+    System.out.println("la suma total es "+ suma);
     }
 }
