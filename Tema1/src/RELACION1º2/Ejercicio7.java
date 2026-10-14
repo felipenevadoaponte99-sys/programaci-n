@@ -11,7 +11,8 @@ public class Ejercicio7 {
         System.out.println("agrega los numeros para la media");
         for (int i = 1; i<= cantidad; i++){
             int numeros =teclado.nextInt();
-            total = total+ numeros;
+            //total = total+ numeros;
+            total+=numeros;
         }
         System.out.printf("la media es " + total/cantidad);
 
