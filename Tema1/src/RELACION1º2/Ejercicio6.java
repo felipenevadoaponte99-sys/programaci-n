@@ -10,7 +10,8 @@ public class Ejercicio6 {
         int numB = teclado.nextInt();
         int numFinal = 0;
         for (int i = 1; i<=numB; i++){
-            numFinal=numFinal+numA;
+           // numFinal=numFinal+numA;
+            numFinal+=numA;
         }
         System.out.printf("respuesta " + numFinal);
 
