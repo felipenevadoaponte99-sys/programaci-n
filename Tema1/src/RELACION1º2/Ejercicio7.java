@@ -7,6 +7,10 @@ public class Ejercicio7 {
         Scanner teclado=new Scanner(System.in);
         System.out.println("inserta la cantidad de nueros que vas a insertar");
         int cantidad =teclado.nextInt();
+        while (cantidad<=0){
+            System.out.println("el nuemro 0 y los negativos no valen");
+            cantidad =teclado.nextInt();
+        }
         int total =0;
         System.out.println("agrega los numeros para la media");
         for (int i = 1; i<= cantidad; i++){
