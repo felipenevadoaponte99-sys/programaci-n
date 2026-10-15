@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ejercicio9 {
     static void main (String[] args){
         Scanner teclado = new Scanner(System.in);
-        System.out.println("escrive el numeros");
+        System.out.println("escribe el numeros");
         int miNumero= teclado.nextInt();
         int miContador=0;
         String miRespuesta="";

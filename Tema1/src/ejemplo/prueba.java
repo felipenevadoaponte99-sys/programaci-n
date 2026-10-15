@@ -1,5 +1,7 @@
 package ejemplo;
 
+import java.util.Scanner;
+
 public class prueba {
     static void main(String[] args) {
         //1Muestra los números múltiplos de 5 de 0 a 100 utilizando un bucle for.
@@ -57,6 +59,8 @@ public class prueba {
 //acertamos, se nos mostrará el mensaje “Lo siento, esa no es la combinación”
 //y si acertamos se nos dirá “La caja fuerte se ha abierto satisfactoriamente”.
 //Tendremos cuatro oportunidades para abrir la caja fuerte.
-
+        Scanner teclado =new Scanner(System.in);
+        int intentos=4;
+       // for (int i =0)
     }
 }
