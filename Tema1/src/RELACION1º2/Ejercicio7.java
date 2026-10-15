@@ -18,7 +18,7 @@ public class Ejercicio7 {
             //total = total+ numeros;
             total+=numeros;
         }
-        System.out.printf("la media es " + total/cantidad);
+        System.out.println("la media es " + (double)total/cantidad);
 
     }
 }
