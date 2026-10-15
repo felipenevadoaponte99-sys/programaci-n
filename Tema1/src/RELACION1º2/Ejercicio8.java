@@ -14,19 +14,22 @@ public class Ejercicio8 {
             System.out.println("escrive el numero");
             miNumero = Integer.parseInt(teclado.nextLine());
 
-
             if (menor == 0 && !primero) {
                 menor = miNumero;
                 primero = true;
             }
+
             if (miNumero < menor) {
                 menor = miNumero;
             }
             System.out.println("¿Desea introducir más números (S/N)?");
-            seguir = teclado.nextLine().toUpperCase(Locale.ROOT);;
-                while (!seguir.equals("S") && !seguir.equals("N")){
-                    System.out.println("No es una respuesta corecta:");
-                    seguir = teclado.nextLine().toUpperCase(Locale.ROOT);;
+            //seguir = teclado.nextLine().toUpperCase(Locale.ROOT);
+            seguir = teclado.nextLine().toUpperCase();
+
+            while (!seguir.equals("S") && !seguir.equals("N")){
+                    System.out.println("No es una respuesta correcta, (S/N):");
+                    //seguir = teclado.nextLine().toUpperCase(Locale.ROOT);
+                    seguir = teclado.nextLine().toUpperCase();
                 }
 
         } while (seguir.equals("S"));
