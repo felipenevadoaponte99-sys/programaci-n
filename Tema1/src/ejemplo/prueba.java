@@ -134,5 +134,48 @@ public class prueba {
             System.out.println("el numero "+i+" tiene como cuadrado "+i*i+" y el cubo "+i*i*i);
         }
         */
+        //12 Escribe un programa que muestre los n primeros términos de la serie de
+        //Fibonacci. El primer término de la serie de Fibonacci es 0, el segundo es 1 y
+        //el resto se calcula sumando los dos anteriores, por lo que tendríamos que los
+        //términos son 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144… El número n se debe
+        //introducir por teclado.
+        /*
+        System.out.println("numero fibonacci:");
+        Scanner teclado =new Scanner(System.in);
+        int nume =teclado.nextInt();
+        int num0=0;
+        int num1=1;
+        int resul=0;
+        for (int i=1;i<=nume;i++){
+            if (i==1){
+                System.out.print(num0);
+            }else if(i==2){
+                System.out.print(", "+num1);
+            }else{
+                resul=num1+num0;
+                System.out.print(", "+resul);
+                num0=num1;
+                num1=resul;
+            }
+        }
+        */
+        //13  Escribe un programa que lea una lista de diez números y determine cuántos
+        //son positivos, y cuántos son negativos.//79
+        /*
+        System.out.println("determinar numeros positivos y negativos");
+        Scanner teclado =new Scanner(System.in);
+        int posi=0;
+        int nega=0;
+        for (int i=1;i<=10;i++) {
+            int nume = teclado.nextInt();
+            System.out.print("as insertado ");
+            if (nume<0){
+                nega++;
+            }else {
+                posi++;
+            }
+            System.out.print(nega+" negativos y "+posi+" positivos\n");
+        }
+        */
     }
 }
