@@ -177,5 +177,22 @@ public class prueba {
             System.out.print(nega+" negativos y "+posi+" positivos\n");
         }
         */
+        //14 Escribe un programa que pida una base y un exponente (entero positivo) y que
+        //calcule la potencia.
+        Scanner teclado =new Scanner(System.in);
+        System.out.println("escribe la base");
+        int base= teclado.nextInt();
+        System.out.println("escribe el exponente");
+        int expone= teclado.nextInt();
+        if (expone>=0){
+            int resp=base;
+            for (int i=1;i<expone;i++){
+                resp=base*resp;
+            }
+            System.out.println("el resultado es "+resp);
+        }else{
+            System.out.println("exponente negativo fuera");
+        }
+
     }
 }
