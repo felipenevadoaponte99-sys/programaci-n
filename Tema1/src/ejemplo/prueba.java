@@ -107,5 +107,32 @@ public class prueba {
         }
         System.out.println("tiene "+ conta+" digitos");
         */
+        //10 Escribe un programa que calcule la media de un conjunto de números positivos
+        //introducidos por teclado. A priori, el programa no sabe cuántos números se
+        //introducirán. El usuario indicará que ha terminado de introducir los datos
+        //cuando meta un número negativo
+        /*
+        System.out.println("introduce numeros");
+        Scanner teclado = new Scanner(System.in);
+        int contador=0;
+        int almacen =0;
+        int nume =teclado.nextInt();
+        while (nume>=0){
+            almacen+=nume;
+            contador+=1;
+            nume =teclado.nextInt();
+        }
+        System.out.println("la media de "+ almacen+"/"+contador+"="+ (double) almacen/contador);
+        */
+        //11 Escribe un programa que muestre en tres columnas, el cuadrado y el cubo de
+        //los 5 primeros números enteros a partir de uno que se introduce por teclado.
+        /*
+        System.out.println("inserta el numero:");
+        Scanner teclado =new Scanner(System.in);
+        int nume =teclado.nextInt();
+        for (int i=nume;i<=nume+5;i++){
+            System.out.println("el numero "+i+" tiene como cuadrado "+i*i+" y el cubo "+i*i*i);
+        }
+        */
     }
 }
