@@ -179,6 +179,7 @@ public class prueba {
         */
         //14 Escribe un programa que pida una base y un exponente (entero positivo) y que
         //calcule la potencia.
+        /*
         Scanner teclado =new Scanner(System.in);
         System.out.println("escribe la base");
         int base= teclado.nextInt();
@@ -193,6 +194,45 @@ public class prueba {
         }else{
             System.out.println("exponente negativo fuera");
         }
-
+    */
+        //15 Escribe un programa que dados dos números, uno real (base) y un entero
+        //positivo (exponente), saque por pantalla todas las potencias con base el
+        //numero dado y exponentes entre uno y el exponente introducido. No se deben
+        //utilizar funciones de exponenciación. Por ejemplo, si introducimos el 2 y el 5,
+        //se deberán mostrar 21, 22, 23, 24 y 25.
+       /*
+        Scanner teclado =new Scanner(System.in);
+        System.out.println("ingrese la base");
+        double base= teclado.nextDouble();
+        System.out.println("ingrese el exponente");
+        int exponente= teclado.nextInt();
+        double basesuma=1;
+            for (int i =1; i<=exponente;i++){
+                for (int j =1; j<=i;j++){
+                    basesuma*=base;
+                }
+                System.out.println(base+"^"+i+" = "+basesuma);
+                basesuma=1;
+            }
+            */
+        // 16 Escribe un programa que diga si un número introducido por teclado es o no
+        //primo. Un número primo es aquel que sólo es divisible entre él mismo y la
+        //unidad.
+        /*
+        System.out.println("inserta el numero");
+        Scanner teclado =new Scanner(System.in);
+        int num=teclado.nextInt();
+        int cont=0;
+        for(int i=1;i<=num;i++){
+            if(num%i==0){
+                cont++;
+            }
+        }
+        if (cont==2){
+            System.out.println("es un numero primo");
+        }else {
+            System.out.println("NO es un numero primo");
+        }
+        */
     }
 }
