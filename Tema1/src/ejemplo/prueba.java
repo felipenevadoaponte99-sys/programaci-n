@@ -1,0 +1,366 @@
+package ejemplo;
+
+import java.util.Scanner;
+
+public class prueba {
+    static void main(String[] args) {
+        //1Muestra los números múltiplos de 5 de 0 a 100 utilizando un bucle for.
+        /*
+        for (int i =5;i<=100;i+=5){
+            System.out.println(i);
+        }
+        */
+        //2Muestra los números múltiplos de 5 de 0 a 100 utilizando un bucle while.
+        /*
+        int contador=5;
+        while (contador<=100){
+            System.out.println(contador);
+            contador+=5;
+        }
+        */
+        //3Muestra los números múltiplos de 5 de 0 a 100 utilizando un bucle do-while.
+        /*
+        int contador=0;
+        do{
+            if (contador<100){
+                contador+=5;
+            }
+            System.out.println(contador);
+
+        }while (contador<100);
+        */
+        //4Muestra los números del 320 al 160,contandode 20 en 20 hacia atrás utilizando un bucle
+        /*
+        for(int i =320; 160<=i; i-=20){
+            System.out.println(i);
+        }
+        System.out.println("----------------------------------------------------");
+        */
+        //5 Muestra los números del 320 al 160,contandode 20 en 20 hacia atrás utilizando un bucle
+        /*
+        int numero=320;
+        while (160<=numero){
+            System.out.println(numero);
+            numero-=20;
+        }
+        */
+        //6 Muestra los números del 320 al 160, contando de 20 en 20 utilizando un bucle
+        /*
+        int numero=320;
+        do{
+            System.out.println(numero);
+            if (160<=numero){
+                numero-=20;
+            }
+        }while (160<=numero);
+        */
+//7 Realiza el control de acceso a una caja fuerte. La combinación será un
+//número de 4 cifras. El programa nos pedirá la combinación para abrirla. Si no
+//acertamos, se nos mostrará el mensaje “Lo siento, esa no es la combinación”
+//y si acertamos se nos dirá “La caja fuerte se ha abierto satisfactoriamente”.
+//Tendremos cuatro oportunidades para abrir la caja fuerte.
+        /*
+        Scanner teclado =new Scanner(System.in);
+        int intentos=0;
+        int pass=1234;
+        boolean corecto=false;
+        System.out.println("contraseña para seguir");
+        while (intentos<4) {
+            intentos++;
+            int numero = teclado.nextInt();
+            if (numero ==pass) {
+                corecto=true;
+                intentos=4;
+            }else {
+                System.out.println("has gastado " + intentos+" intentos");
+            }
+        }
+        if (corecto){
+            System.out.println("contraseña corecta");
+        }else {
+            System.out.println("final de intentos");
+        }
+        */
+        //8Muestra la tabla de multiplicar de un número introducido por teclado.
+        /*
+        System.out.println("Tablas de multiplicar");
+        Scanner teclado = new Scanner(System.in);
+        int numero = teclado.nextInt();
+        for(int i=1; i<=10;i++){
+            System.out.println(numero+"*"+i+"="+numero*i);
+        }
+        */
+        //9 Realiza un programa que nos diga cuántos dígitos tiene un número introducido
+        //por teclado. Este ejercicio es equivalente a otro realizado anteriormente, con
+        //la salvedad de que el anterior estaba limitado a números de 5 dígitos como
+        //máximo. En esta ocasión, hay que realizar el ejercicio utilizando bucles; de
+        //esta manera, la única limitación en el número de dígitos la establece el tipo de
+        //dato que se utilice
+        /*
+        System.out.println("inserte el numero");
+        Scanner teclado = new Scanner(System.in);
+        int nume = teclado.nextInt();
+        int conta=0;
+        while (nume>=1){
+            nume/=10;
+            conta++;
+        }
+        System.out.println("tiene "+ conta+" digitos");
+        */
+        //10 Escribe un programa que calcule la media de un conjunto de números positivos
+        //introducidos por teclado. A priori, el programa no sabe cuántos números se
+        //introducirán. El usuario indicará que ha terminado de introducir los datos
+        //cuando meta un número negativo
+        /*
+        System.out.println("introduce numeros");
+        Scanner teclado = new Scanner(System.in);
+        int contador=0;
+        int almacen =0;
+        int nume =teclado.nextInt();
+        while (nume>=0){
+            almacen+=nume;
+            contador+=1;
+            nume =teclado.nextInt();
+        }
+        System.out.println("la media de "+ almacen+"/"+contador+"="+ (double) almacen/contador);
+        */
+        //11 Escribe un programa que muestre en tres columnas, el cuadrado y el cubo de
+        //los 5 primeros números enteros a partir de uno que se introduce por teclado.
+        /*
+        System.out.println("inserta el numero:");
+        Scanner teclado =new Scanner(System.in);
+        int nume =teclado.nextInt();
+        for (int i=nume;i<=nume+5;i++){
+            System.out.println("el numero "+i+" tiene como cuadrado "+i*i+" y el cubo "+i*i*i);
+        }
+        */
+        //12 Escribe un programa que muestre los n primeros términos de la serie de
+        //Fibonacci. El primer término de la serie de Fibonacci es 0, el segundo es 1 y
+        //el resto se calcula sumando los dos anteriores, por lo que tendríamos que los
+        //términos son 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144… El número n se debe
+        //introducir por teclado.
+        /*
+        System.out.println("numero fibonacci:");
+        Scanner teclado =new Scanner(System.in);
+        int nume =teclado.nextInt();
+        int num0=0;
+        int num1=1;
+        int resul=0;
+        for (int i=1;i<=nume;i++){
+            if (i==1){
+                System.out.print(num0);
+            }else if(i==2){
+                System.out.print(", "+num1);
+            }else{
+                resul=num1+num0;
+                System.out.print(", "+resul);
+                num0=num1;
+                num1=resul;
+            }
+        }
+        */
+        //13  Escribe un programa que lea una lista de diez números y determine cuántos
+        //son positivos, y cuántos son negativos.//79
+        /*
+        System.out.println("determinar numeros positivos y negativos");
+        Scanner teclado =new Scanner(System.in);
+        int posi=0;
+        int nega=0;
+        for (int i=1;i<=10;i++) {
+            int nume = teclado.nextInt();
+            System.out.print("as insertado ");
+            if (nume<0){
+                nega++;
+            }else {
+                posi++;
+            }
+            System.out.print(nega+" negativos y "+posi+" positivos\n");
+        }
+        */
+        //14 Escribe un programa que pida una base y un exponente (entero positivo) y que
+        //calcule la potencia.
+        /*
+        Scanner teclado =new Scanner(System.in);
+        System.out.println("escribe la base");
+        int base= teclado.nextInt();
+        System.out.println("escribe el exponente");
+        int expone= teclado.nextInt();
+        if (expone>=0){
+            int resp=base;
+            for (int i=1;i<expone;i++){
+                resp=base*resp;
+            }
+            System.out.println("el resultado es "+resp);
+        }else{
+            System.out.println("exponente negativo fuera");
+        }
+    */
+        //15 Escribe un programa que dados dos números, uno real (base) y un entero
+        //positivo (exponente), saque por pantalla todas las potencias con base el
+        //numero dado y exponentes entre uno y el exponente introducido. No se deben
+        //utilizar funciones de exponenciación. Por ejemplo, si introducimos el 2 y el 5,
+        //se deberán mostrar 21, 22, 23, 24 y 25.
+       /*
+        Scanner teclado =new Scanner(System.in);
+        System.out.println("ingrese la base");
+        double base= teclado.nextDouble();
+        System.out.println("ingrese el exponente");
+        int exponente= teclado.nextInt();
+        double basesuma=1;
+            for (int i =1; i<=exponente;i++){
+                for (int j =1; j<=i;j++){
+                    basesuma*=base;
+                }
+                System.out.println(base+"^"+i+" = "+basesuma);
+                basesuma=1;
+            }
+            */
+        // 16 Escribe un programa que diga si un número introducido por teclado es o no
+        //primo. Un número primo es aquel que sólo es divisible entre él mismo y la
+        //unidad.
+        /*
+        System.out.println("inserta el numero");
+        Scanner teclado =new Scanner(System.in);
+        int conta=teclado.nextInt();
+        int cont=0;
+        for(int i=1;i<=conta;i++){
+            if(conta%i==0){
+
+        int num=teclado.nextInt();
+        int cont=0;
+        for(int i=1;i<=num;i++){
+            if(num%i==0){
+                cont++;
+            }
+        }
+        if (cont==2){
+            System.out.println("es un numero primo");
+        }else {
+            System.out.println("NO es un numero primo");
+        }
+        */
+        // 17 Realiza un programa que sume los 100 números siguientes a un número entero
+        //y positivo introducido por teclado. Se debe comprobar que el dato introducido
+        //es correcto (que es un número positivo).
+        //17.1
+        /*
+        Scanner teclado =new Scanner(System.in);
+        int conta=0;
+        do{
+            System.out.println("Inseta el numero:");
+            conta=teclado.nextInt();
+            if (conta<0){
+                System.out.println("no se permite numeros negativos.");
+            }
+        }while (conta<0);
+        int acu=0;
+        for (int i=conta;i<conta+100;i++){
+            acu++;
+            //System.out.println(i);
+        }
+        System.out.println("La suma de los 100 números siguientes a " + conta + " es " + (conta+acu));
+        */
+        //17.2
+        /*
+        Scanner teclado =new Scanner(System.in);
+        System.out.println("Inseta el numero:");
+        int conta=teclado.nextInt();
+        while (conta<0){
+            System.out.println("no se permite numeros negativos.");
+            System.out.println("Inseta el numero:");
+            conta=teclado.nextInt();
+        }
+        for (int i=conta+1;i<=conta+100;i++){
+            System.out.println(i);
+        }
+        */
+        //18 Escribe un programa que obtenga los números enteros comprendidos entre dos
+        //números introducidos por teclado y validados como distintos, el programa debe
+        //empezar por el menor de los enteros introducidos e ir incrementando de 7 en
+        //7.
+
+        //19 Realiza un programa que pinte una pirámide por pantalla. La altura se debe
+        //pedir por teclado. El carácter con el que se pinta la pirámide también se debe
+        //pedir por teclado.
+/*
+=======
+
+        Scanner teclado =new Scanner(System.in);
+        System.out.println("indique la altura:");
+        int altura =teclado.nextInt();
+        int conta=0;
+        int a=1;
+        while (conta<altura) {
+            a+=2;
+            for (int i =1;i<=a;i++) {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+            conta++;
+        }
+
+        /*for (int i =1;i<=altura;i++){
+            for (int j=1;j<=altura;j++){
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }*/
+
+        /*
+        Scanner teclado =new Scanner(System.in);
+        System.out.print("Por favor, introduzca la altura de la pirámide: ");
+        int alturaIntroducida = Integer.parseInt(teclado.nextLine());
+        System.out.print("Introduzca el carácter de relleno: ");
+        String relleno = teclado.nextLine();
+        int planta = 1;
+        int longitudDeLinea = 1;
+        int espacios = alturaIntroducida - 1;
+        while (planta <= alturaIntroducida) {
+// inserta espacios
+            for (int i = 1; i <= espacios; i++) {
+                System.out.print(" ");
+            }
+// pinta la línea
+            for (int i = 1; i <= longitudDeLinea; i++) {
+                System.out.print(relleno);
+            }
+            System.out.println();
+            planta++;
+            espacios--;
+            longitudDeLinea += 2;
+        }
+*/
+    //20 Igual que el ejercicio anterior pero esta vez se debe pintar una pirámide hueca.
+        /*
+        Scanner teclado =new Scanner(System.in);
+        System.out.print("Por favor, introduzca la altura de la pirámide: ");
+        int alturaIntroducida = Integer.parseInt(teclado.nextLine());
+        System.out.print("Introduzca el carácter de relleno: ");
+        String relleno = teclado.nextLine();
+        int planta = 1;
+        int longitudDeLinea = 1;
+        int espacios = alturaIntroducida - 1;
+        while (planta <= alturaIntroducida) {
+// inserta espacios
+            for (int i = 1; i <= espacios; i++) {
+                System.out.print(" ");
+            }
+// pinta la línea
+            for (int i = 1; i <= longitudDeLinea; i++) {
+                if(i==1 || i==longitudDeLinea){
+                    System.out.print(relleno);
+                }else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+            planta++;
+            espacios--;
+            longitudDeLinea += 2;
+        }
+
+         */
+
+
+    }
+}
