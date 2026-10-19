@@ -1,0 +1,14 @@
+--- Archivos compilados de Java ---
+out/
+bin/
+*.class
+
+--- Configuraciones del IDE (IntelliJ IDEA) ---
+.idea/
+*.iml
+*.iws
+*.ipr
+
+--- Archivos del sistema operativo ---
+.DS_Store
+Thumbs.db
