@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ejercicio10 {
     static void main (String[] args){
         Scanner teclado = new Scanner(System.in);
-        System.out.println("Inserte el tipo de operacion y despues los numeros:");
+        System.out.println("Inserte el tipo de operacion y despues los números:");
         String operacion =teclado.nextLine();
         int nu1 = teclado.nextInt();
         int nu2 = teclado.nextInt();
