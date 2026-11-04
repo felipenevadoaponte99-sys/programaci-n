@@ -69,7 +69,41 @@ public class MiEntradaSalida {
             return false;
         }
     }
+    public static int numeroAleatorio(int numero) {
+        //int numeroAleatorio = (int) (Math.random() * numero) + 1;
+        int numeroAleatorio = (int) (Math.random() * numero);
+        return numeroAleatorio;
+    }
 
+    public static int[] listaArrayAleatorio(int lista, int asta) {
+        int[] array=new int[lista];
+        for (int i = 0; i < array.length; i++) {
+            array[i]= MiEntradaSalida.numeroAleatorio(asta);
+        }
+        return array;
+    }
+    public static boolean bucarArray(int[] miArray, int busca) {
+        int i = 0;
+        while (i<miArray.length) {
+            if (miArray[i] == busca) {
+                return true;
+            }else {
+                i++;
+            }
+        }
+        return false;
+    }
+    public static int bucarArrayPosicion(int[] miArray, int busca) {
+        int i = 0;
+        while (i<miArray.length) {
+            if (miArray[i] == busca) {
+                return i;
+            }else {
+                i++;
+            }
+        }
+        return -1;
+    }
 
     static void main(String[] args) {
         String nombre = leerCadena("¿como te llamas?");
