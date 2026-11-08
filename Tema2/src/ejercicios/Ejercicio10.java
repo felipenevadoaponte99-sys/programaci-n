@@ -2,27 +2,28 @@ package ejercicios;
 
 import ejemplo.MiEntradaSalida;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio10 {
     static Scanner teclado = new Scanner(System.in);
 
     public static void arreglaArray(int[] miArray) {
-        int[] nuevoArray = new int[miArray.length];
+        //int[] nuevoArray = new int[miArray.length];
 
         /*for (int i = 0; i < nuevoArray.length; i++) {
             System.out.print(nuevoArray[i]);
         }*/
-        for (int i = 0; i < miArray.length; i++) {
-            for (int j = 0; j < nuevoArray.length; j++) {
-                if (nuevoArray[j] != miArray[i] && j==i) {
-                    System.out.print(miArray[i]);
-                }
+
+        Arrays.sort(miArray);
+
+        for (int j = 0; j < miArray.length; j++) {
+            if (miArray.length - 1 == j || miArray[j] != miArray[j + 1]) {
+                System.out.print(miArray[j]);
             }
         }
-        //return nuevoArray;
-//////////////////////////////////////////preguntar
 
+        //return nuevoArray;
     }
 
     static void main() {
