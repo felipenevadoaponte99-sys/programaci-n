@@ -19,7 +19,6 @@ public class Ejercicio9 {
             miArray[i] *= -1;
         }
 */
-
         for (int i = 0; i < miArray.length; i++) {
             for (int j = 0; j < miArray.length-i-1; j++) {
                 if (miArray[j]>miArray[j+1]){
@@ -29,7 +28,6 @@ public class Ejercicio9 {
                 }
             }
         }
-
         System.out.println(Arrays.toString(miArray));
 
         /*System.out.print("insete el numero: ");
