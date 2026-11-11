@@ -104,6 +104,44 @@ public class MiEntradaSalida {
         }
         return -1;
     }
+    static int con = 0;
+    public static int[] apilar(int nume, int[] almace) {
+        almace[con] = nume;
+        con++;
+        System.out.print("[");
+        for (int j = 0; j < con; j++) {
+            if (con == 1) {
+                System.out.print(almace[j]);
+            } else if (con <= 10) {
+                if (con - 1 > j) {
+                    System.out.print(almace[j] + ", ");
+                } else {
+                    System.out.print(almace[j]);
+                }
+            }
+        }
+        System.out.println("]");
+        return almace;
+    }
+
+    public static int[] desapilar(int[] almace) {
+        almace[con] = 0;
+        con--;
+        System.out.print("[");
+        for (int j = 0; j < con; j++) {
+            if (con == 1) {
+                System.out.print(almace[j]);
+            } else if (con <= 10) {
+                if (con > j) {
+                    System.out.print(almace[j] + ", ");
+                } else {
+                    System.out.print(almace[j]);
+                }
+            }
+        }
+        System.out.println("]");
+        return almace;
+    }
 
     static void main(String[] args) {
         String nombre = leerCadena("¿como te llamas?");

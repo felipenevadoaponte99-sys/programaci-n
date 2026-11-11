@@ -1,79 +1,88 @@
 package ejercicios;
 
+import ejemplo.MiEntradaSalida;
+
 import java.util.Arrays;
+import java.util.Locale;
+import java.util.Scanner;
 
 public class Ejercicio13 {
-    /*public static int[] apilar(int nume, int[] almace, int i) {
-        almace[i]=nume;
-        System.out.println(Arrays.toString(almace));
-        return almace;
-    }
-    //public static int[] desapilar(){
-
-    //}*/
+    static int con = 0;
 
     public static int[] apilar(int nume, int[] almace) {
-        boolean si = true;
-        for (int i = 0; i < almace.length; i++) {
-            if (almace[i] == 0 && si) {
-                almace[i] = nume;
-                si = false;
-                System.out.println("pila-->"+Arrays.toString(almace));
-            }
-            if (almace[almace.length - 1] != 0 && si) {
-                System.out.println("La pila está llena, no puedo apilar el elemento");
-                si = false;
-
+        almace[con] = nume;
+        con++;
+        System.out.print("[");
+        for (int j = 0; j < con; j++) {
+            if (con == 1) {
+                System.out.print(almace[j]);
+            } else if (con <= 10) {
+                if (con - 1 > j) {
+                    System.out.print(almace[j] + ", ");
+                } else {
+                    System.out.print(almace[j]);
+                }
             }
         }
+        System.out.println("]");
         return almace;
     }
 
     public static int[] desapilar(int[] almace) {
-        boolean si = true;
-        for (int i = 0; i < almace.length; i++) {
-            if (almace[0] == 0 && si) {
-                System.out.println("No hay elementos en la pila");
-                si = false;
-            }
-            if (almace[i] == 0 && si) {
-                almace[i - 1] = 0;
-                si = false;
-                System.out.println("pila-->"+Arrays.toString(almace));
-            }
-            if(almace[almace.length-1]!=0){
-                almace[almace.length - 1] = 0;
-                System.out.println("pila-->"+Arrays.toString(almace));
-                si = false;
-
+        almace[con] = 0;
+        con--;
+        System.out.print("[");
+        for (int j = 0; j < con; j++) {
+            if (con == 1) {
+                System.out.print(almace[j]);
+            } else if (con <= 10) {
+                if (con > j) {
+                    System.out.print(almace[j] + ", ");
+                } else {
+                    System.out.print(almace[j]);
+                }
             }
         }
+        System.out.println("]");
         return almace;
     }
 
     static void main() {
-        /*int i=0;
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Para apilar di ´apilar´, para desapilar di ´desapilar´ y para finalizar escrive lo que quieras");
+        String letra = teclado.nextLine();
+        int numero = 0;
+        int[] almace = new int[10];
         int[] pila;
-        int[] almace= new int[10];
-        pila = apilar(3, almace, i++);
-        pila = apilar(12, almace, i++);
-        pila = apilar(40, almace, i);
-        //pila =desapilar();*/
-        int[] almace = new int[5];
-        int[] pila;
-        pila = apilar(3, almace);
-        pila = apilar(12, almace);
-        pila = apilar(40, almace);
-        pila = apilar(40, almace);
-        pila = apilar(40, almace);
-        pila = apilar(40, almace);
-        pila = desapilar(almace);
-        pila = desapilar(almace);
-        pila = desapilar(almace);
-        pila = desapilar(almace);
-        pila = desapilar(almace);
-        pila = desapilar(almace);
+        do {
+            switch (letra) {
+                case "apilar":
+                    numero = MiEntradaSalida.leerEntero("inseta el numero");
+                    if (con < 10) {
+                        System.out.print("pila ->");
+                        pila = apilar(numero, almace);
+                    } else {
+                        System.out.println("La pila está llena, no puedo apilar el elemento");
+                    }
+                    break;
+                case "desapilar":
+                    if (con > 0) {
+                        System.out.print("pila ->");
+                        pila = desapilar(almace);
+                    } else {
+                        System.out.println("No hay elementos en la pila");
+                    }
+                    break;
+                default:
+                    System.out.println("final");
+                    letra = "";
+                    break;
 
+            }
+            if (letra.equals("apilar") || letra.equals("desapilar")) {
+                letra = teclado.nextLine();
+            }
+        } while (letra.equals("apilar") || letra.equals("desapilar"));
         System.out.print("fin de prueba");
     }
 }

@@ -21,7 +21,7 @@ public class Ejercicio9 {
 */
         for (int i = 0; i < miArray.length; i++) {
             for (int j = 0; j < miArray.length-i-1; j++) {
-                if (miArray[j]>miArray[j+1]){
+                if (miArray[j]<miArray[j+1]){
                     int cajica=miArray[j];
                     miArray[j]=miArray[j+1];
                     miArray[j+1]=cajica;
