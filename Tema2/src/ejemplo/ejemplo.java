@@ -24,6 +24,16 @@ public class ejemplo {
 
         System.out.println(mcm(12));
 
+        //el break corta el bucle
+        for (int i = 0; i < 10; i++) {
+            System.out.println(i);
+            break;
+        }
+        // el continue lo continua
+        for (int i = 0; i < 10; i++) {
+            System.out.println(i);
+            continue;
+        }
 
     }
 }

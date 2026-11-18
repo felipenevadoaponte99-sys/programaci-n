@@ -48,27 +48,31 @@ public class MiEntradaSalida {
         }
         return ("el numero esta en el rango");
     }
-    //leerCaracter(String mensaje)
-  public static char leerCaracter(String mensaje){
-          System.out.printf("%s: ",mensaje);
-          return teclado.nextLine().charAt(0);
-         // return mensaje.charAt(0);
 
-  }
-    //leerSiN(String mensaje)
-    public static void leerSiN(String mensaje){
-        System.out.println(mensaje+" ¡Hola Mundo!");
+    //leerCaracter(String mensaje)
+    public static char leerCaracter(String mensaje) {
+        System.out.printf("%s: ", mensaje);
+        return teclado.nextLine().charAt(0);
+        // return mensaje.charAt(0);
+
     }
+
+    //leerSiN(String mensaje)
+    public static void leerSiN(String mensaje) {
+        System.out.println(mensaje + " ¡Hola Mundo!");
+    }
+
     //leerSiNo(String mensaje)
-    public static boolean leerSiNo(String mensaje){
+    public static boolean leerSiNo(String mensaje) {
         System.out.printf("%s: ", mensaje);
         String esAzul = teclado.next();
-        if (esAzul.equals("si")){
+        if (esAzul.equals("si")) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
+
     public static int numeroAleatorio(int numero) {
         //int numeroAleatorio = (int) (Math.random() * numero) + 1;
         int numeroAleatorio = (int) (Math.random() * numero);
@@ -76,52 +80,72 @@ public class MiEntradaSalida {
     }
 
     public static int[] listaArrayAleatorio(int lista, int asta) {
-        int[] array=new int[lista];
+        int[] array = new int[lista];
         for (int i = 0; i < array.length; i++) {
-            array[i]= MiEntradaSalida.numeroAleatorio(asta);
+            array[i] = MiEntradaSalida.numeroAleatorio(asta);
         }
         return array;
     }
+
     public static boolean bucarArray(int[] miArray, int busca) {
         int i = 0;
-        while (i<miArray.length) {
+        while (i < miArray.length) {
             if (miArray[i] == busca) {
                 return true;
-            }else {
+            } else {
                 i++;
             }
         }
         return false;
     }
+
     public static int bucarArrayPosicion(int[] miArray, int busca) {
         int i = 0;
-        while (i<miArray.length) {
+        while (i < miArray.length) {
             if (miArray[i] == busca) {
                 return i;
-            }else {
+            } else {
                 i++;
             }
         }
         return -1;
     }
+
     static int con = 0;
-    public static int[] apilar(int nume, int[] almace) {
-        almace[con] = nume;
-        con++;
-        System.out.print("[");
+    static int NUMERO_ARRAY = 3;
+    static int[] almace = new int[NUMERO_ARRAY];
+
+    public static void apilar(int nume) {
+        if (NUMERO_ARRAY > con) {
+            almace[con] = nume;
+            con++;
+            mostrapila();
+        } else {
+            System.out.println("La pila está llena, no puedo apilar el elemento");
+        }
+    }
+
+    public static void desapilar() {
+        if (0 < con) {
+            con--;
+            mostrapila();
+        } else {
+            System.out.println("No hay elementos en la pila");
+        }
+    }
+
+    public static void mostrapila() {
+
+        System.out.print("pila ->[");
         for (int j = 0; j < con; j++) {
-            if (con == 1) {
+            if (j > 0) {
+                System.out.print(", " + almace[j]);
+            } else {
                 System.out.print(almace[j]);
-            } else if (con <= 10) {
-                if (con - 1 > j) {
-                    System.out.print(almace[j] + ", ");
-                } else {
-                    System.out.print(almace[j]);
-                }
             }
         }
         System.out.println("]");
-        return almace;
+
     }
 
     public static int[] desapilar(int[] almace) {
@@ -169,10 +193,9 @@ public class MiEntradaSalida {
 
         boolean siNo = leerSiNo("¿el cielo es azul?");
         System.out.print("la respuesta es ");
-        if (siNo){
+        if (siNo) {
             System.out.print("verdadero");
-        }
-        else {
+        } else {
             System.out.print("falso");
         }
 

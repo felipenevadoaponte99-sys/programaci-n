@@ -6,31 +6,48 @@ import java.util.Scanner;
 
 public class Ejercicio14 {
     static int con = 0;
+    static int primerElemento = 0;
+    static int NUMERO_ARRAY = 3;
+    static int[] almace = new int[NUMERO_ARRAY];
 
-    public static int[] desencolar(int[] almace) {
-        almace[0] = 0;
-        for (int i = 0; i < con; i++) {
-            if (i == con - 1) {
-                almace[i] = 0;
-            } else {
-                almace[i] = almace[i + 1];
-            }
+    public static void encolar(int nume) {
+        if (NUMERO_ARRAY > con) {
+            //almace[con] = nume;
+            int posicion=(primerElemento+con)% almace.length;
+            almace[posicion]=nume;
+            con++;
+            mostrarcola();
+        } else {
+            System.out.println("La pila está llena, no puedo apilar el elemento");
         }
-        con--;
-        System.out.print("[");
+    }
+
+    public static void desencolar() {
+        if (0 < con) {/*
+            for (int i = 0; i < con; i++) {
+                almace[i] = almace[i + 1];
+            }*/
+            System.out.println(primerElemento);
+            primerElemento=(primerElemento+1)% almace.length;
+            //almace[0]=primerElemento;
+            con--;
+            mostrarcola();
+        } else {
+            System.out.println("No hay elementos en la pila");
+        }
+    }
+    public static void mostrarcola() {
+
+        System.out.print("pila ->[");
         for (int j = 0; j < con; j++) {
-            if (con == 1) {
-                System.out.print(almace[j]);
-            } else if (con <= 10) {
-                if (con > j) {
-                    System.out.print(almace[j] + ", ");
-                } else {
-                    System.out.print(almace[j]);
-                }
+            if (j > 0) {
+                System.out.print(", " + almace[(j+primerElemento) % almace.length]);
+            } else {
+                System.out.print(almace[(j+primerElemento) % almace.length]);
             }
         }
         System.out.println("]");
-        return almace;
+
     }
 
     static void main() {
@@ -38,39 +55,24 @@ public class Ejercicio14 {
         System.out.println("Para apilar di ´encolar´, para desapilar di ´desencolar´ y para finalizar escrive lo que quieras");
         String letra = teclado.nextLine();
         int numero = 0;
-        int[] almace = new int[10];
-        int[] pila;
         do {
             switch (letra) {
                 case "encolar":
                     numero = MiEntradaSalida.leerEntero("inseta el numero");
-                    if (con < 10) {
-                        System.out.print("cola ->");
-                        pila = MiEntradaSalida.apilar(numero, almace);
-                        con++;
-
-                    } else {
-                        System.out.println("La cola está llena, no puedo encolar el elemento");
-                    }
+                    encolar(numero);
                     break;
                 case "desencolar":
-                    if (con > 0) {
-                        System.out.print("cola ->");
-                        pila = desencolar(almace);
-                    } else {
-                        System.out.println("No hay elementos en la cola");
-                    }
+                    desencolar();
                     break;
-                default:
-                    System.out.println("final");
+                case "salir":
                     letra = "";
                     break;
+                default:
 
             }
-            if (letra.equals("encolar") || letra.equals("desencolar")) {
-                letra = teclado.nextLine();
-            }
-        } while (letra.equals("encolar") || letra.equals("desencolar"));
+            letra = teclado.nextLine();
+
+        } while (!letra.equals("salir"));
         System.out.print("fin de prueba");
     }
 }
