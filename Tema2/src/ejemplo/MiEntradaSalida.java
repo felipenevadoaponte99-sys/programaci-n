@@ -79,6 +79,12 @@ public class MiEntradaSalida {
         return numeroAleatorio;
     }
 
+    public static int numeroAleatorioAsta(int numero, int asta) {
+        //int numeroAleatorio = (int) (Math.random() * numero) + 1;
+        int numeroAleatorio = (int) (Math.random() * numero)+asta;
+        return numeroAleatorio;
+    }
+
     public static int[] listaArrayAleatorio(int lista, int asta) {
         int[] array = new int[lista];
         for (int i = 0; i < array.length; i++) {

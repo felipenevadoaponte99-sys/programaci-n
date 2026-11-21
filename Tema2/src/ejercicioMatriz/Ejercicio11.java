@@ -12,6 +12,7 @@ public class Ejercicio11 {
             for (int j = 0; j <matrizUno[0].length; j++){
                 if (matrizUno[i][j]!=matrizDos[matrizUno.length-1-i][matrizUno[0].length-1-j]){
                     igual=false;
+                    break;
                 }
             }
         }
